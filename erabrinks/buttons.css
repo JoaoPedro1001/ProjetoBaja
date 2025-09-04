@@ -1,0 +1,323 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.botao_inscrito {
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  background-color: #c82729;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  font-size: 50px;
+  padding: 20px 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.botao_inscrito:hover {
+  cursor: pointer;
+  background-color: #a61d1f;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.join {
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  background-color: #ffffff00;
+  border-radius: 4px;
+  color: #0759e1;
+  border: #0759e1;
+  border-style: solid;
+  font-size: 50px;
+  padding: 20px 40px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.join:hover {
+  cursor: pointer;
+  background-color: #0759e1;
+  color: #ffffff;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.tweet {
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  background-color: #1da1f2;
+  color: #ffffff;
+  border: none;
+  border-radius: 60px;
+  font-size: 40px;
+  padding: 35px 55px;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+
+.tweet:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.Uber {
+  text-decoration: none;
+  background-color: #000000;
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+  font-size: 40px;
+  padding: 30px 40px;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.Uber:hover {
+  cursor: pointer;
+  animation: pulse 1s ease;
+}
+
+.Amazon {
+  text-decoration: none;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffd700;
+  color: #000000;
+  font-size: 40px;
+  padding: 20px 40px;
+  width: 400px;
+  border: none;
+  border-radius: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.Amazon:hover {
+  cursor: pointer;
+  background-color: #ffcc00;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.github {
+  text-decoration: none;
+  text-align: justify;
+  color: #ffffff;
+  background-color: #1fa016;
+  font-family: "Arial", sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 15px;
+}
+
+.github:hover {
+  cursor: pointer;
+  background-color: #1a8c13;
+}
+
+.bootstrap {
+  text-decoration: none;
+  background-color: #935dc6;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  font-size: 30px;
+  padding: 20px 40px;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+.bootstrap:hover {
+  cursor: pointer;
+  background-color: #7f4bb0;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.bootstrapDownload {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #868686;
+  border: #878787;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 24px 45px;
+  border-radius: 10px;
+}
+
+.bootstrapDownload:hover {
+  cursor: pointer;
+  color: #282828;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.linkedin {
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  background-color: #4379dd;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 20px 40px;
+  border-radius: 45px;
+}
+
+.linkedin2 {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #4379dd;
+  font-size: 30px;
+  padding: 20px 55px;
+  border-radius: 45px;
+  border: #4379dd;
+  border-style: solid;
+  transition: all 0.2s ease;
+}
+
+.linkedin2:hover {
+  cursor: pointer;
+  background-color: #4379dd;
+  color: #ffffff;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.linkedin:hover {
+  cursor: pointer;
+  background-color: #3b6bbf;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* evita cortar o topo em telas menores */
+  min-height: 100vh; /* altura mínima da viewport */
+  gap: 15px;
+  margin: 0;
+  padding: 20px; /* opcional, dá respiro nas laterais */
+  overflow: auto; /* ativa o scroll quando necessário */
+}
+
+.bootstrapContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.linkedinContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.backAmazon {
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.backAmazon:visited {
+  color: #1da1f2;
+}
+
+.backAmazon:hover {
+  cursor: pointer;
+}
+
+.preco {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #1a8c13;
+}
+
+.entrega {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.adicionarCarrinho {
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  background-color: rgb(255, 217, 0);
+  color: #000000;
+  padding: 10px 30px;
+  font-weight: 500;
+  border-radius: 30px;
+  width: 102px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.adicionarCarrinho:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+.comprarAgora:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+.comprarAgora {
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  background-color: #fdb43f;
+  padding: 10px 30px;
+  border-radius: 30px;
+  width: 100px;
+  text-align: center;
+  color: #000000;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.containerCarrinho {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.botoesCompra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}

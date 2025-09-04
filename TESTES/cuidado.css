@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    @import url(https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap);
+} /*Resetar toda a formatacao da pagina*/
+
+body {
+    height: 100%; /*Altura da tela 100% da tela*/
+    width: 100%; /*Largura da tela 100% da tela*/
+    box-sizing: border-box;
+    background-color: rgba(45, 45, 45, 0.7);
+    color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    background-image: url(background_Animais.png);
+    background-blend-mode: darken;
+}
+.fraseAzulada {
+    color: #b5165a;
+}
+
+.apresentacao {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    gap: 50px;
+}
+
+.apresentacaoConteudo {
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+}
+
+.apresentacaoConteudoTitulo {
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: bold;
+    font-size: 36px;
+}
+
+.apresentacaoConteudoTexto {
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.botoes a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    background-color: #b5165a;
+    border-radius: 16px;
+    width: 280px;
+    padding: 21.5px 0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.botoes a:hover {
+    box-shadow: #000000 0px 0px 20px;
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+s .apresentacaoImagem {
+    width: 435px;
+    height: 100%;
+    border-radius: 16px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.image-container {
+    display: flex;
+    justify-content: start;
+    border-radius: 16px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
