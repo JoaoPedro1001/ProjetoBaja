@@ -9,36 +9,21 @@
   }
 }
 
-@keyframes loading {
-  0% {
-    opacity: 0%;
-  }
-  25% {
-    opacity: 0%;
-  }
-  50% {
-    opacity: 80%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-@keyframes slideBG {
-  0% {
-    background-position: 45% 50%;
-  }
-  100% {
-    background-position: 52% 50%;
-  }
-}
-
 @keyframes fade-up {
   0% {
     transform: translateY(20%);
   }
   100% {
     transform: translateY(0%);
+  }
+}
+
+@keyframes bgZoom {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  100% {
+    transform: scale(1.1) translateX(-1%);
   }
 }
 
@@ -55,15 +40,17 @@ body {
 }
 
 .background_img {
+  position: fixed;
+  inset: 0;
   width: 100vw;
   height: 100vh;
-  background-position: fixed;
+  background-image: url("/prototipoA3/imgs/BAJA-SAE-BRASIL_599.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
-  background-image: url("/prototipoA3/imgs/BAJA-SAE-BRASIL_599.jpg");
+  background-position: 45% 50%;
   z-index: -1;
-  animation: slideBG 3s linear forwards;
+  animation: bgZoom 20s ease forwards;
+  filter: saturate(120%);
 }
 
 .background_img::before {
@@ -85,7 +72,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 8px 10px;
+  padding: 2px 10px;
   backdrop-filter: blur(1rem);
   box-sizing: border-box;
   position: relative;
@@ -173,6 +160,7 @@ a:active {
 #titulo {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 30vw;
   max-width: 600px;
   min-width: 400px;
@@ -192,10 +180,11 @@ a:active {
   animation: fade-in 0.5s ease;
   width: 25vh;
   height: 60px;
-  background-color: #1617177d;
+  background-color: #1617174e;
   padding: 5px 10px;
   border-radius: 10px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
+  box-shadow: #1617174e 3px 3px 6px 0px inset;
 }
 
 .container_descricao {
@@ -208,7 +197,7 @@ a:active {
   min-width: 400px;
   height: 90vh;
   max-height: 800px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   z-index: 11;
   border-radius: 10px;
 }
@@ -220,17 +209,18 @@ a:active {
   height: 67vh;
   max-height: 700px;
   font-size: 1rem;
-  background: #1617177d;
+  background: #1617174e;
   border-radius: 10px;
   padding: 16px 20px 20px 16px;
   text-align: justify;
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0.1px;
   animation: fade-in 1s ease, fade-up 1s ease;
   z-index: 10;
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  box-shadow: #1617174e 3px 3px 6px 0px inset;
 }
 
 .fade_bottom {
@@ -246,6 +236,7 @@ a:active {
     rgba(22, 23, 23, 1) 0%,
     rgba(22, 23, 23, 0) 100%
   );
+  animation: fade-in 3s ease, fade-up 1s ease;
 }
 
 .img_footer {
