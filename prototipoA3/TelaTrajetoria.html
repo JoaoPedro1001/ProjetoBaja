@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossa Trajetória - Baja SAE</title>
+  <style>
+    /* ---------- GENERAL RESET ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ---------- BACKGROUND ---------- */
+    .background_img {
+      position: fixed;
+      inset: 0;
+      background-image: url("imgs/BAJA-SAE-BRASIL_599.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.75) saturate(110%);
+      z-index: -2;
+    }
+
+    .background_overlay {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(10, 10, 30, 0.85));
+      z-index: -1;
+    }
+
+    /* ---------- HEADER ---------- */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 60px;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(12px);
+      background: rgba(30, 30, 50, 0.3);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 10;
+    }
+
+    .header_logo_img {
+      width: 140px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .header_logo_img:hover {
+      transform: scale(1.05);
+    }
+
+    .header_botoes {
+      display: flex;
+      gap: 25px;
+    }
+
+    .header_botoes a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      position: relative;
+      padding: 5px;
+      transition: color 0.3s;
+    }
+
+    .header_botoes a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: 60%;
+      height: 2px;
+      background: #fff;
+      transition: transform 0.25s ease;
+    }
+
+    .header_botoes a:hover::after,
+    .header_botoes a.active::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    /* ---------- TITLE ---------- */
+    h1 {
+      text-align: center;
+      margin-top: 80px;
+      font-size: 2.8rem;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    /* ---------- TIMELINE ---------- */
+    .timeline {
+      max-width: 1000px;
+      margin: 60px auto;
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 3px;
+      height: 100%;
+      background: rgba(255,255,255,0.2);
+    }
+
+    .timeline-item {
+      width: 45%;
+      margin: 50px 0;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .timeline-item.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-item:nth-child(odd) {
+      float: left;
+      clear: both;
+      transform-origin: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      float: right;
+      clear: both;
+      transform-origin: left;
+    }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    width: 22px;
+    height: 22px;
+    background: #a17bff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #a17bff, 0 0 30px #a17bff55;
+    transition: transform 0.2s ease-out;
+    transform: scale(1);
+  }
+
+  .timeline-item:nth-child(odd)::before {
+    right: -60px;
+  }
+
+  .timeline-item:nth-child(even)::before {
+    left: -60px;
+  }
+
+    .timeline-item:nth-child(odd)::before {
+      right: -60px;
+    }
+
+    .timeline-item:nth-child(even)::before {
+      left: -60px;
+    }
+
+    .timeline-item.active::before {
+      transform: scale(1.4);
+    }
+
+    .timeline-item img {
+      width: 260px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      float: left;
+      margin-right: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    .timeline-item h3 {
+      color: #a17bff;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item p {
+      color: #f0f0f0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .timeline::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    /* ---------- MOBILE ---------- */
+    @media (max-width: 768px) {
+      .header {
+        padding: 10px 20px;
+      }
+
+      .header_botoes {
+        gap: 10px;
+      }
+
+      .timeline::before {
+        left: 25px;
+      }
+
+      .timeline-item {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        text-align: left;
+      }
+
+      .timeline-item img {
+        width: 100%;
+        height: 180px;
+        float: none;
+        margin: 0 0 12px 0;
+      }
+
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        top: 25px;
+        width: 22px;
+        height: 22px;
+        background: #a17bff;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #a17bff, 0 0 30px #a17bff55;
+        transition: transform 0.2s ease-out;
+        transform: scale(1);
+      }
+
+  .timeline-item:nth-child(odd)::before {
+    right: -60px;
+  }
+
+  .timeline-item:nth-child(even)::before {
+    left: -60px;
+  }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background_img"></div>
+  <div class="background_overlay"></div>
+
+  <header class="header">
+    <a href="index.html">
+      <img class="header_logo_img" src="imgs/Baja-Nacional.png" alt="Logo do Projeto">
+    </a>
+    <nav class="header_botoes">
+      <a href="index.html">Home</a>
+      <a href="TelaEquipe.html">Equipe</a>
+      <a href="TelaTrajetoria.html" class="active">Trajetória</a>
+      <a href="TelaContato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Nossa Trajetória</h1>
+
+    <section class="timeline">
+      <div class="timeline-item">
+        <img src="imgs/ft2019.jpeg" alt="Foto 2019">
+        <h3>2019</h3>
+        <p>Fundação da equipe Baja SAE na nossa instituição, com um pequeno grupo de estudantes apaixonados por engenharia automotiva.</p>
+      </div>
+
+      <div class="timeline-item">
+        <img src="imgs/ft2020.jpeg" alt="Foto 2020">
+        <h3>2020</h3>
+        <p>Desenvolvimento do primeiro protótipo e participação virtual nas competições devido à pandemia.</p>
+      </div>
+
+      <div class="timeline-item">
+        <img src="imgs/ft2021.jpeg" alt="Foto 2021">
+        <h3>2021</h3>
+        <p>Aperfeiçoamento do projeto com foco em inovação e sustentabilidade. Conquista do primeiro reconhecimento regional.</p>
+      </div>
+
+      <div class="timeline-item">
+        <img src="imgs/ft2022.jpeg" alt="Foto 2022">
+        <h3>2022</h3>
+        <p>Expansão da equipe e participação em múltiplas competições nacionais. Desenvolvimento de novas tecnologias.</p>
+      </div>
+
+      <div class="timeline-item">
+        <img src="imgs/ft2023.jpeg" alt="Foto 2023">
+        <h3>2023</h3>
+        <p>Consolidação como uma das principais equipes do país, com destaque para projetos de eficiência energética.</p>
+      </div>
+
+      <div class="timeline-item">
+        <img src="imgs/ft2024.jpeg" alt="Foto 2024">
+        <h3>2024</h3>
+        <p>Atual fase do projeto, focando em inovações tecnológicas e preparação para competições internacionais.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('scroll', function() {
+      document.querySelectorAll('.timeline-item').forEach(function(item) {
+        const rect = item.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      document.dispatchEvent(new Event('scroll'));
+    });
+  </script>
+
+</body>
+</html>
