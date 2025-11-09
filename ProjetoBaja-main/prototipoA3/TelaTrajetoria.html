@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nossa Trajetória - Baja SAE</title>
+    <link rel="stylesheet" href="/ProjetoBaja-main/prototipoA3/A3.css" />
+    <script src="/ProjetoBaja-main/prototipoA3/A3.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="background_img"></div>
+    <div class="background_overlay"></div>
+
+    <div class="header">
+      <div>
+        <a
+          class="header_logo"
+          href="https://www.unicuritiba.edu.br/"
+          target="_blank"
+        >
+          <img
+            src="/ProjetoBaja-main/prototipoA3/imgs/unicuritiba.png"
+            class="header_logo_img"
+            alt="Logo UniCuritiba"
+          />
+        </a>
+      </div>
+      <div class="header_botoes">
+        <a href="/ProjetoBaja-main/prototipoA3/A3.html">
+          <i class="fa-regular fa-house"></i>
+          Home</a
+        >
+        <a href="/ProjetoBaja-main/prototipoA3/TelaTrajetoria.html">
+          <i class="fa-solid fa-bars"></i>
+          Trajetória
+        </a>
+        <a href="https://saebrasil.org.br" target="_blank">
+          <i class="fa-solid fa-car"></i>
+          SaeBrasil</a
+        >
+      </div>
+    </div>
+    <main>
+      <div class="body_titulo2_container">
+        <h1 class="body_titulo2" id="h1Trajetoria"></h1>
+      </div>
+      <section class="timeline">
+        <div class="timeline-item">
+          <img src="imgs/ft2019.jpeg" alt="Foto 2019" />
+          <h3>2019</h3>
+          <p>
+            Fundação da equipe Baja SAE na nossa instituição, com um pequeno
+            grupo de estudantes apaixonados por engenharia automotiva.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <img src="imgs/ft2020.jpeg" alt="Foto 2020" />
+          <h3>2020</h3>
+          <p>
+            Desenvolvimento do primeiro protótipo e participação virtual nas
+            competições devido à pandemia.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <img src="imgs/ft2021.jpeg" alt="Foto 2021" />
+          <h3>2021</h3>
+          <p>
+            Aperfeiçoamento do projeto com foco em inovação e sustentabilidade.
+            Conquista do primeiro reconhecimento regional.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <img src="imgs/ft2022.jpeg" alt="Foto 2022" />
+          <h3>2022</h3>
+          <p>
+            Expansão da equipe e participação em múltiplas competições
+            nacionais. Desenvolvimento de novas tecnologias.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <img src="imgs/ft2023.jpeg" alt="Foto 2023" />
+          <h3>2023</h3>
+          <p>
+            Consolidação como uma das principais equipes do país, com destaque
+            para projetos de eficiência energética.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <img src="imgs/ft2024.jpeg" alt="Foto 2024" />
+          <h3>2024</h3>
+          <p>
+            Atual fase do projeto, focando em inovações tecnológicas e
+            preparação para competições internacionais.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.addEventListener("scroll", function () {
+        document.querySelectorAll(".timeline-item").forEach(function (item) {
+          const rect = item.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            item.classList.add("active");
+          }
+        });
+      });
+
+      window.addEventListener("DOMContentLoaded", () => {
+        document.dispatchEvent(new Event("scroll"));
+      });
+    </script>
+    <div class="container_footer">
+      <a
+        href="https://saebrasil.org.br/programas-estudantis/baja-sae-brasil-2/"
+        target="_blank"
+        ><img
+          class="img_footer"
+          src="/ProjetoBaja-main/prototipoA3/imgs/Baja-Nacional.png"
+      /></a>
+    </div>
+    <p class="ref">©Projeto UniCuritiba</p>
+  </body>
+</html>
