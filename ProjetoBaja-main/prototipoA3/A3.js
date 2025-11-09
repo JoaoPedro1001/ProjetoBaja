@@ -25,3 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
     escreveTexto(titulo, "Nossa Trajetória", 100);
   }, 400);
 });
+
+document.addEventListener("scroll", function () {
+  document.querySelectorAll(".boxtop").forEach(function (item) {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      item.classList.add("active");
+    }
+  });
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  document.dispatchEvent(new Event("scroll"));
+});
